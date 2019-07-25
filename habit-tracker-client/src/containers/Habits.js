@@ -19,10 +19,12 @@ class Habits extends Component {
     return (
       <div className="HabitsContainer">
         <h1>Daily Habits</h1>
-        {this.props.habits.map(habit => (
-          <HabitCard key={habit.id} habit={habit} />
-        ))}
         <Button clicked={this.addHabitHandler}>Add Habit</Button>
+        <div>
+          {this.props.habits.map(habit => (
+            <HabitCard key={habit.id} habit={habit} />
+          ))}
+        </div>
       </div>
     );
   }

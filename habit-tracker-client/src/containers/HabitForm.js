@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Button from '../components/UI/Button/Button';
 import { updateHabitFormData } from '../actions/habitForm';
 import { createHabit } from '../actions/habits';
 import CheckboxContainer from './CheckboxContainer';
@@ -14,6 +15,7 @@ class HabitForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
+    this.props.history.push('/habits');
     this.props.createHabit(this.props.habitFormData);
   };
 
@@ -45,7 +47,7 @@ class HabitForm extends Component {
           <div>
             <CheckboxContainer />
           </div>
-          <button type="submit">Save habit</button>
+          <Button btnType="submit">Save habit</Button>
         </form>
       </div>
     );
