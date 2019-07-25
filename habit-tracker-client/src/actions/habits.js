@@ -19,6 +19,13 @@ const addHabit = habit => {
   };
 };
 
+const updateHabit = habit => {
+  return {
+    type: 'UPDATE_HABIT_SUCCESS',
+    habit
+  };
+};
+
 /**
  * Async Actions
  */
@@ -43,6 +50,24 @@ export const createHabit = habit => {
       .then(response => response.json())
       .then(habit => {
         dispatch(addHabit(habit));
+        dispatch(resetHabitForm());
+      })
+      .catch(error => console.log(error));
+  };
+};
+
+export const updateHabitStreak = habit => {
+  return dispatch => {
+    fetch(`${API_URL}/habits/:id`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ habit: habit })
+    })
+      .then(response => response.json())
+      .then(habit => {
+        dispatch(updateHabit(habit));
         dispatch(resetHabitForm());
       })
       .catch(error => console.log(error));
