@@ -37,7 +37,7 @@ class HabitForm extends Component {
           <div>
             <label htmlFor="description">Description:</label>
             <input
-              type="number"
+              type="text"
               onChange={this.handleOnChange}
               name="description"
               value={description}
