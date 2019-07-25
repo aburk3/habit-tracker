@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { updateHabitFormData } from '../actions/habitForm';
 import { createHabit } from '../actions/habits';
+import CheckboxContainer from './CheckboxContainer';
 
 class HabitForm extends Component {
   handleOnChange = event => {
@@ -40,6 +41,9 @@ class HabitForm extends Component {
               name="description"
               value={description}
             />
+          </div>
+          <div>
+            <CheckboxContainer />
           </div>
           <button type="submit">Add habit</button>
         </form>
