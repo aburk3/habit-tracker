@@ -14,7 +14,7 @@ class Habits extends Component {
   render() {
     return (
       <div className="HabitsContainer">
-        <h1>Habits Component</h1>
+        <h1>Daily Habits</h1>
         {this.props.habits.map(habit => (
           <HabitCard key={habit.id} habit={habit} />
         ))}
