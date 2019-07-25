@@ -7,9 +7,7 @@ import { createHabit } from '../actions/habits';
 class HabitForm extends Component {
   handleOnChange = event => {
     const { name, value } = event.target;
-    const currentHabitFormData = Object.assign({}, this.props.habitFormData, {
-      [name]: value
-    });
+    const currentHabitFormData = { ...this.props.habitFormData, [name]: value };
     this.props.updateHabitFormData(currentHabitFormData);
   };
 
