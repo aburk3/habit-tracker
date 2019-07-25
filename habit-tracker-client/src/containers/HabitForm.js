@@ -45,7 +45,7 @@ class HabitForm extends Component {
           <div>
             <CheckboxContainer />
           </div>
-          <button type="submit">Add habit</button>
+          <button type="submit">Save habit</button>
         </form>
       </div>
     );

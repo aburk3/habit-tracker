@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import HabitCard from '../components/HabitCard';
-import HabitForm from './HabitForm';
 import { getHabits } from '../actions/habits';
 import './Habits.css';
 
@@ -11,6 +10,10 @@ class Habits extends Component {
     this.props.getHabits();
   }
 
+  addHabitHandler = () => {
+    this.props.history.push('/habit-form');
+  };
+
   render() {
     return (
       <div className="HabitsContainer">
@@ -18,7 +21,7 @@ class Habits extends Component {
         {this.props.habits.map(habit => (
           <HabitCard key={habit.id} habit={habit} />
         ))}
-        <HabitForm />
+        <button onClick={this.addHabitHandler}>Add Habit</button>
       </div>
     );
   }
