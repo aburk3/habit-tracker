@@ -6,6 +6,8 @@ import { updateHabitFormData } from '../actions/habitForm';
 import { createHabit } from '../actions/habits';
 import CheckboxContainer from './CheckboxContainer';
 
+import './HabitForm.css';
+
 class HabitForm extends Component {
   handleOnChange = event => {
     const { name, value } = event.target;
@@ -24,28 +26,27 @@ class HabitForm extends Component {
 
     return (
       <div>
-        Add A Habit
+        <h1>Create a New Habit</h1>
         <form onSubmit={this.handleOnSubmit}>
-          <div>
+          <div className="Input1">
             <label htmlFor="name">Name:</label>
             <input
+              className="InputField"
               type="text"
               onChange={this.handleOnChange}
               name="name"
               value={name}
             />
           </div>
-          <div>
+          <div className="Input1">
             <label htmlFor="description">Description:</label>
             <input
+              className="InputField"
               type="text"
               onChange={this.handleOnChange}
               name="description"
               value={description}
             />
-          </div>
-          <div>
-            <CheckboxContainer />
           </div>
           <Button btnType="submit">Save habit</Button>
         </form>

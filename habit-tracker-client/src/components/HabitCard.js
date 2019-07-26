@@ -4,18 +4,19 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { updateHabitStreak } from '../actions/habits';
 import classes from './HabitCard.module.css';
+import { connect } from 'react-redux';
 
-const handleIncrement = (habit, incrementType) => {
-  if (incrementType === 'ADD') {
-    console.log('Adding');
-    updateHabitStreak({ ...habit, streak: habit.streak + 1 });
-  } else if (incrementType === 'SUBTRACT') {
-    console.log('Subtracting');
-    updateHabitStreak({ ...habit, streak: habit.streak - 1 });
-  }
-};
+const HabitCard = ({ habit, updateHabitStreak }) => {
+  const handleIncrement = (habit, incrementType) => {
+    if (incrementType === 'ADD') {
+      console.log('Adding');
+      updateHabitStreak({ ...habit, streak: habit.streak + 1 });
+    } else if (incrementType === 'SUBTRACT') {
+      console.log('Subtracting');
+      updateHabitStreak({ ...habit, streak: habit.streak - 1 });
+    }
+  };
 
-const HabitCard = ({ habit }) => {
   return (
     <div key={habit.id} className="HabitCard">
       <h3>{habit.name}</h3>
@@ -38,4 +39,7 @@ const HabitCard = ({ habit }) => {
   );
 };
 
-export default HabitCard;
+export default connect(
+  null,
+  { updateHabitStreak }
+)(HabitCard);

@@ -19,7 +19,6 @@ class Api::HabitsController < ApplicationController
 	end
 
 	def update
-		binding.pry
 		if @habit.update(habit_params)
 			render json: @habit
 		else
