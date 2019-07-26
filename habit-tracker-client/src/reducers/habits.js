@@ -6,6 +6,9 @@ export default (state = [], action) => {
     case 'CREATE_HABIT_SUCCESS':
       return state.concat(action.habit);
 
+    case 'UPDATE_HABIT_SUCCESS':
+      return action.habits;
+
     default:
       return state;
   }

@@ -57,9 +57,10 @@ export const createHabit = habit => {
 };
 
 export const updateHabitStreak = habit => {
+  console.log('test');
   return dispatch => {
-    fetch(`${API_URL}/habits/:id`, {
-      method: 'PATCH',
+    return fetch(`${API_URL}/habits`, {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -68,7 +69,6 @@ export const updateHabitStreak = habit => {
       .then(response => response.json())
       .then(habit => {
         dispatch(updateHabit(habit));
-        dispatch(resetHabitForm());
       })
       .catch(error => console.log(error));
   };
