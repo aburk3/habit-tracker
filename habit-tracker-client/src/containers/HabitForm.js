@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Button from '../components/UI/Button/Button';
 import { updateHabitFormData } from '../actions/habitForm';
 import { createHabit } from '../actions/habits';
-import CheckboxContainer from './CheckboxContainer';
 
 import './HabitForm.css';
 
