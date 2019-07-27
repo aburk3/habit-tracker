@@ -47,7 +47,9 @@ class HabitForm extends Component {
               value={description}
             />
           </div>
-          <Button btnType="submit">Save habit</Button>
+          <Button btnStyle="Create" btnType="submit">
+            Save habit
+          </Button>
         </form>
       </div>
     );
