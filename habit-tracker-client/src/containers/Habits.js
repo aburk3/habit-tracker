@@ -12,7 +12,11 @@ class Habits extends Component {
   }
 
   addHabitHandler = () => {
-    this.props.history.push('/habit-form');
+    this.props.history.push('/new');
+  };
+
+  aboutAppHandler = () => {
+    this.props.history.push('/about');
   };
 
   render() {
@@ -20,6 +24,7 @@ class Habits extends Component {
       <div className="HabitsContainer">
         <h1>Daily Habits</h1>
         <Button clicked={this.addHabitHandler}>Add Habit</Button>
+        <Button clicked={this.aboutAppHandler}>About</Button>
         <div>
           {this.props.habits.map((habit, index) => (
             <HabitCard key={index} habit={habit} />
