@@ -15,10 +15,6 @@ class Habits extends Component {
     this.props.history.push('/habit-form');
   };
 
-  // componentDidUpdate() {
-  //   this.props.getHabits();
-  // }
-
   render() {
     return (
       <div className="HabitsContainer">
