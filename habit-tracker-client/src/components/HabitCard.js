@@ -5,14 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { updateHabitStreak } from '../actions/habits';
 import classes from './HabitCard.module.css';
 import { connect } from 'react-redux';
+// import { getHabits } from '../actions/habits';
 
 const HabitCard = ({ habit, updateHabitStreak }) => {
   const handleIncrement = (habit, incrementType) => {
     if (incrementType === 'ADD') {
-      console.log('Adding');
       updateHabitStreak({ ...habit, streak: habit.streak + 1 });
     } else if (incrementType === 'SUBTRACT') {
-      console.log('Subtracting');
       updateHabitStreak({ ...habit, streak: habit.streak - 1 });
     }
   };
@@ -38,6 +37,12 @@ const HabitCard = ({ habit, updateHabitStreak }) => {
     </div>
   );
 };
+
+// const mapStateToProps = state => {
+//   return {
+//     habits: state.habits
+//   };
+// };
 
 export default connect(
   null,

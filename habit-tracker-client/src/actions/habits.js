@@ -66,10 +66,8 @@ export const updateHabitStreak = habit => {
       body: JSON.stringify(habit)
     })
       .then(response => response.json())
-      .then(data => console.log(data))
-      .then(habit => {
-        dispatch(updateHabit(habit));
-      })
+
+      .then(data => dispatch(updateHabit(data)))
       .catch(error => console.log(error));
   };
 };
