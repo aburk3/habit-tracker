@@ -2,7 +2,7 @@ import React from 'react';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { updateHabitStreak } from '../actions/habits';
+import { updateHabitStreak } from '../../actions/habits';
 import classes from './HabitCard.module.css';
 import { connect } from 'react-redux';
 

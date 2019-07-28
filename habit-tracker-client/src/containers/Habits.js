@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import HabitCard from '../components/HabitCard';
+import HabitCard from '../components/HabitCard/HabitCard';
 import Button from '../components/UI/Button/Button';
 import { getHabits } from '../actions/habits';
 import './Habits.css';
