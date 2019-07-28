@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from './Header';
 
 const About = () => {
   return (
     <>
-      <h1>About this App</h1>
+      <h1>
+        <Header />
+      </h1>
       <div>
         The intention of this application is to allow a user to easily track
         habits. First, you can add a new habit that has a name and description.

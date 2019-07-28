@@ -5,6 +5,7 @@ import HabitCard from '../components/HabitCard/HabitCard';
 import Button from '../components/UI/Button/Button';
 import { getHabits } from '../actions/habits';
 import './Habits.css';
+import Header from '../components/Header';
 
 class Habits extends Component {
   componentDidMount() {
@@ -22,7 +23,9 @@ class Habits extends Component {
   render() {
     return (
       <div className="HabitsContainer">
-        <h1>Daily Habits</h1>
+        <h1>
+          <Header path={this.props.location.pathname} />
+        </h1>
         <Button btnStyle="Create" clicked={this.addHabitHandler}>
           Add Habit
         </Button>

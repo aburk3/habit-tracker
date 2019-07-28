@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Button from '../components/UI/Button/Button';
 import { updateHabitFormData } from '../actions/habitForm';
 import { createHabit } from '../actions/habits';
+import Header from '../components/Header';
 
 import './HabitForm.css';
 
@@ -25,7 +26,9 @@ class HabitForm extends Component {
 
     return (
       <div>
-        <h1>Create a New Habit</h1>
+        <h1>
+          <Header path={this.props.location.pathname} />
+        </h1>
         <form onSubmit={this.handleOnSubmit}>
           <div className="Input1">
             <label htmlFor="name">Name:</label>
