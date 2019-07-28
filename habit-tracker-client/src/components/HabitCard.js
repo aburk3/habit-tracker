@@ -16,7 +16,7 @@ const HabitCard = ({ habit, updateHabitStreak }) => {
   };
 
   return (
-    <div key={habit.id} className="HabitCard">
+    <div key={habit.id} className={classes.HabitCard}>
       <h3>{habit.name}</h3>
       <p>Streak: {habit.streak}</p>
       <FontAwesomeIcon
