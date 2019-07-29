@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../Header';
 
-const About = () => {
+const About = props => {
   return (
     <>
-      <Header />
+      <h2>
+        <Header path={props.location.pathname} />
+      </h2>
 
       <div>
         The intention of this application is to allow a user to easily track

@@ -8,7 +8,7 @@ const Header = props => {
       case '/new':
         return 'Create a new habit';
       case '/about':
-        return 'About this App';
+        return 'About This App';
       default:
         return 'Habit Tracker';
     }
