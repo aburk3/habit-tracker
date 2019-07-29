@@ -5,7 +5,7 @@ import './App.css';
 import Layout from './hoc/Layout/Layout';
 import Habits from './containers/Habits';
 import HabitForm from './containers/HabitForm';
-import About from './components/About';
+import About from './components/About/About';
 
 class App extends Component {
   render() {
