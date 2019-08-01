@@ -14,7 +14,7 @@ const Header = props => {
     }
   };
 
-  return <h2>{getTitle()}</h2>;
+  return <>{getTitle()}</>;
 };
 
 export default Header;

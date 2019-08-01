@@ -18,7 +18,9 @@ class HabitForm extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.history.push('/habits');
+    console.log('a');
     this.props.createHabit(this.props.habitFormData);
+    console.log('b');
   };
 
   render() {

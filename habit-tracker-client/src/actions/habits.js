@@ -39,6 +39,7 @@ export const getHabits = () => {
 };
 
 export const createHabit = habit => {
+  console.log('c');
   return dispatch => {
     return fetch(`${API_URL}/habits`, {
       method: 'POST',
@@ -49,6 +50,7 @@ export const createHabit = habit => {
     })
       .then(response => response.json())
       .then(habit => {
+        console.log('d');
         dispatch(addHabit(habit));
         dispatch(resetHabitForm());
       })

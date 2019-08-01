@@ -5,14 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { updateHabitStreak } from '../../actions/habits';
 import classes from './HabitCard.module.css';
 import { connect } from 'react-redux';
+import Button from '../UI/Button/Button';
 
-const HabitCard = ({ habit, updateHabitStreak }) => {
+const HabitCard = ({ habit, updateHabitStreak, props }) => {
   const handleIncrement = (habit, incrementType) => {
     if (incrementType === 'ADD') {
       updateHabitStreak({ ...habit, streak: habit.streak + 1 });
     } else if (incrementType === 'SUBTRACT') {
       updateHabitStreak({ ...habit, streak: habit.streak - 1 });
     }
+  };
+
+  const habitVotesHandler = () => {
+    console.log('in habitVotesHandler');
   };
 
   return (
@@ -33,6 +38,9 @@ const HabitCard = ({ habit, updateHabitStreak }) => {
       <p>
         <b>Description:</b> {habit.description}
       </p>
+      <Button btnStyle="Create" clicked={() => habitVotesHandler()}>
+        Vote on
+      </Button>
     </div>
   );
 };
