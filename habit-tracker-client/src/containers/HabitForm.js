@@ -26,9 +26,8 @@ class HabitForm extends Component {
 
     return (
       <div>
-        <h1>
-          <Header path={this.props.location.pathname} />
-        </h1>
+        <Header path={this.props.location.pathname} />
+
         <form onSubmit={this.handleOnSubmit}>
           <div className="Input1">
             <label htmlFor="name">Name:</label>
