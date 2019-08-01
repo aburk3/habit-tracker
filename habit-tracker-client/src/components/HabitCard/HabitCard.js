@@ -15,6 +15,7 @@ class HabitCard extends React.Component {
 
   habitVotesHandler = () => {
     this.setState({
+      ...this.state,
       votes: this.state.votes + 1
     });
   };
